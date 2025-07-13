@@ -1,0 +1,58 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# dotenv environment variables
+.env
+.env.*.local
+.env.local
+
+
+
+# Logs
+logs
+*.log
+
+# Shopify CLI
+.shopify/
+*.toml.lock
+
+# Vite / build artifacts
+dist/
+build/
+.vite/
+.cache/
+
+# Tailwind / PostCSS
+*.css.map
+
+# Extensions (built output)
+extensions/**/dist/
+extensions/**/build/
+
+# Coverage reports
+coverage/
+
+# IDE settings
+.vscode/
+.idea/
+*.sw?
+
+# Optional: exclude local Mongo data or SQLite DBs if any
+*.sqlite
+*.db
+dump.rdb
+
+# Optional: If you're on Windows
+*.exe
+*.dll
+
+# Optional: For Mac .AppleDouble file
+.AppleDouble
+
+# Optional: Git conflict leftovers
+*.orig
+*.rej

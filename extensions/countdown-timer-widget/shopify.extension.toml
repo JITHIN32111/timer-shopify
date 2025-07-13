@@ -1,0 +1,5 @@
+name = "Countdown Timer"
+type = "theme_app_extension"
+
+[extension]
+type = "theme"

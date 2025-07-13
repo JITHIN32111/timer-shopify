@@ -1,0 +1,20 @@
+{
+  "name": "timer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:backend": "node backend/app/index.js",
+    "dev:frontend": "vite --config frontend/vite.config.js",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@shopify/shopify-api": "^11.13.0",
+    "@shopify/shopify-app-session-storage-memory": "^4.0.18",
+    "concurrently": "^9.2.0"
+  }
+}
