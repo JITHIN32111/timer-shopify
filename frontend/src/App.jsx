@@ -1,28 +1,17 @@
-import AddTimer from './components/AddTimer';
-import { useState,useEffect } from 'react';
+// frontend/src/App.jsx
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Admin from "./pages/Admin";
+
 function App() {
-   const [shop, setShop] = useState('');
-
-  useEffect(() => {
-    fetch('/api/whoami')
-      .then((res) => {
-        if (res.status === 401) {
-          const shop = new URLSearchParams(location.search).get('shop');
-          window.location.href = `/auth?shop=${shop}`;
-        } else {
-          return res.json();
-        }
-      })
-      .then((data) => setShop(data?.shop));
-  }, []);
-
-  // ... authentication useEffect from before
-
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-4">Countdown Timer Admin Panel</h1>
-      <AddTimer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="*" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
